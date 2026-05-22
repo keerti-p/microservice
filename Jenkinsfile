@@ -46,11 +46,5 @@ pipeline {
         }
     }
     // Optional - to delete the unwanted cache.
-    post {
-        always {
-            // Cleanup to prevent the "No Space" error from coming back
-            sh 'docker system prune -f'
-            cleanWs()
-        }
-    }
+    
 }
